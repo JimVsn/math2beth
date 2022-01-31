@@ -22,3 +22,16 @@
 @import url(../blocks/popup/__title/popup__title.css);
 @import url(../blocks/popup/__form-math/popup__form-math.css);
 @import url(../blocks/popup/__link/popup__link.css);
+@import url(../blocks/popup/__input/popup__input.css);
+@import url(../blocks/popup/__list/popup__list.css);
+@import url(../blocks/popup/__subtitle/popup__subtitle.css);
+@import url(../blocks/popup/__team-home/popup__team-home.css);
+@import url(../blocks/popup/__title-home/popup__title-home.css);
+@import url(../blocks/popup/__form-container/popup__form-container.css);
+@import url(../blocks/popup/__math-run/popup__math-run.css);
+@import url(../blocks/popup/__home-without/popup__home-without.css);
+@import url(../blocks/popup/__attack-player/popup__attack-player.css);
+@import url(../blocks/popup/__player-list/popup__player-list.css);
+@import url(../blocks/popup/__result-home/popup__result-home.css);
+@import url(../blocks/popup/__result-away/popup__result-away.css);
+@import url(../blocks/popup/__result/popup__result.css);

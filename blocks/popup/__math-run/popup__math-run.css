@@ -1,0 +1,22 @@
+.popup__math-run {
+    font-family: "Intro", "Arial", sans-serif;
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 21.78px;
+    color: #FFFFFF;
+    background-color: #ff7400;
+    border: white 2px solid;
+    width: 358px;
+    text-align: center;
+    border-radius: 10px;
+    transition: 0.3s;
+    margin-top: 10px;
+    padding: 14px 0 14px;
+    margin-bottom: 34px;
+}
+
+.popup__math-run:hover {
+    opacity: 0.8;
+    transition: 0.3s;
+    cursor: pointer;
+  }

@@ -1,0 +1,9 @@
+.popup__result-away {
+  width: 35px;
+  height: 25px;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+}

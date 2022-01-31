@@ -1,0 +1,12 @@
+.popup__attack-player {
+  margin-top: 15px;
+  max-width: 180px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  margin-right: 5px;
+}
+
+.popup__attack-player:last-child {
+  margin-right: 0;
+}
