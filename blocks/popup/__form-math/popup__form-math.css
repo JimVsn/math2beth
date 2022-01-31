@@ -1,0 +1,7 @@
+.popup__form-math {
+  border: none;
+  max-width: 358px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 36px;
+}

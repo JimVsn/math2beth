@@ -18,12 +18,12 @@
     <main class="content">
       <section class="container">
           <h2 class="container__text">1. Чтобы рассчитать среднее количество голов нажмите "Рассчитать" и введите необходимые параметры</h2>
-          <button class="container__math-button" type="button">
+          <button class="container__math-button container__math-button_mod" type="button">
               <p class="container__button-text">Рассчитать</p>
           </button>
 
           <h2 class="container__text">2. Полученное среднее значение голов и коэфициент на событие введите ниже, нажав на кнопку "Узнать выгоду"</h2>
-          <button class="container__math-button" type="button">
+          <button class="container__math-button container__math-button_mod-profit" type="button">
               <p class="container__button-text container__button-text_profit">Узнать выгоду</p>
           </button>
           <p class="container__warning">Math2Beth НЕ гарантирует проход ставки, но на дистанции вы будете в плюсе. Ставьте с умом.</p>
@@ -33,5 +33,17 @@
       <p class="footer__text">© 2022 Math2Beth</p>
     </footer>
   </div>
+  <div class="popup popup_type_math">
+    <div class="popup__container">
+      <button type="button" class="popup__close"><img src="../math2beth/images/CloseIcon.svg" class="popup__close-icon" alt="кнопка закрытия"></button>
+      <h2 class="popup__title">Введите статистику команд за последние 8 матчей</h2>
+      <a class="popup__link" href="https://www.flashscore.ru.com/" target="_blank">Перейти на Myscore</a>
+      <form name="formMath" class="popup__form-math">
+        <input id="homeScored" name="homeScored" type="text" class="popup__input popup__input_mod_home-scored">
+        <input id="awayScored" name="awayScored" type="text" class="popup__input popup__input_mod_away-scored">
+      </form>
+    </div>
+  </div>
+<script src="scripts/index.js"></script>
 </body>
 </html>
