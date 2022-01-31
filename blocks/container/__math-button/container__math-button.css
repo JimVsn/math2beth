@@ -1,0 +1,14 @@
+.container__math-button {
+  width: 400px;
+  background-color: #ff7400;
+  border-radius: 30px;
+  border: white 2px solid;
+  padding: 10px;
+  transition: 0.3s;
+}
+
+.container__math-button:hover {
+  cursor: pointer;
+  opacity: 0.6;
+  transition: 0.3s;
+}

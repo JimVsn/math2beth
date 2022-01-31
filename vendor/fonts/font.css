@@ -1,0 +1,26 @@
+@font-face {
+    font-family: 'Beer money';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./beermoney.woff2) format("woff2"),
+         url(./beermoney.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Nautilus Pompilius';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./nautiluspompilius.woff2) format("woff2"),
+         url(./nautiluspompilius.woff) format("woff");
+}
+
+@font-face {
+    font-family: 'Intro';
+    font-style: normal;
+    font-weight: 400;
+    font-display: swap;
+    src: url(./intro.woff2) format("woff2"),
+         url(./intro.woff) format("woff");
+}
