@@ -4,4 +4,12 @@
   background-color: #fff;
   border: 1px #009999 solid;
   outline: none;
+  padding: 0;
+}
+
+@media screen and (max-width: 670px) {
+  .popup__input{
+    width: 35px;
+    height: 30px;
+  }
 }

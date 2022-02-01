@@ -1,6 +1,8 @@
 .popup__close-icon {
   background: none;
   transition: 0.3s;
+  width: 20px;
+  height: 20px;
 }
   
 .popup__close-icon:hover {
