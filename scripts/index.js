@@ -125,8 +125,8 @@ if(u===1)
  
   if (y<0.11) y=0.01;
 
-  popupResultHome.textContent = m.toFixed(0);
-  popupResultAway.textContent = y.toFixed(0);
+  popupResultHome.textContent = m.toFixed(1);
+  popupResultAway.textContent = y.toFixed(1);
 }
 
 function openPopup(popup){
