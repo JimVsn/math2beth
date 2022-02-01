@@ -17,7 +17,7 @@ function areaRectangle(){
   var a=1*document.formMath.homeScored.value;
   var b=1*document.formMath.awayScored.value;
   var e=1*document.formMath.homeMissed.value;
-  var o=b=1*document.formMath.awayMissed.value;
+  var o=1*document.formMath.awayMissed.value;
   var p=1*document.formMath.selectAttackHome.value;
   var q=1*document.formMath.selectAttackAway.value;
   var d=1*document.formMath.selectDefHome.value;
