@@ -35,3 +35,6 @@
 @import url(../blocks/popup/__result-home/popup__result-home.css);
 @import url(../blocks/popup/__result-away/popup__result-away.css);
 @import url(../blocks/popup/__result/popup__result.css);
+@import url(../blocks/popup/__box/popup__box.css);
+@import url(../blocks/popup/__win/popup__win.css);
+@import url(../blocks/popup/__win-text/popup__win-text.css);
