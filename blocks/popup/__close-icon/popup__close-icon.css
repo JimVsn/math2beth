@@ -8,3 +8,9 @@
   opacity: 0.6;
   transition: 0.3s;
 }
+
+@media screen and (max-width: 670px) {
+  .popup__close-icon {
+    background-color: black;
+  }
+}

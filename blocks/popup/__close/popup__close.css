@@ -7,3 +7,10 @@
   right: -40px;
   top: -40px;
 }
+
+@media screen and (max-width: 670px) {
+  .popup__close {
+    right: 10px;
+    top: 10px;
+  }
+}

@@ -6,3 +6,10 @@
   color: #fff;
   text-align: center;
 }
+
+@media screen and (max-width: 671px) {
+  .container__warning{
+    font-size: 9px;
+    line-height: 14px;
+  }
+}

@@ -6,3 +6,11 @@
   margin-left: 36px;
   margin-bottom: 50px;
 }
+
+@media screen and (max-width: 670px) {
+  .popup__form-math {
+    max-width: 288px;
+    margin-left: 0;
+    margin-bottom: 20px;
+  }
+}

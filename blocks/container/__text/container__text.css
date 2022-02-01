@@ -8,3 +8,10 @@
   margin-bottom: 60px;
   text-align: center;
 }
+
+@media screen and (max-width: 671px) {
+  .container__text {
+    font-size: 19px;
+    line-height: 25px;
+  }
+}
