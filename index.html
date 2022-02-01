@@ -38,7 +38,7 @@
       <button type="button" class="popup__close"><img src="../math2beth/images/CloseIcon.svg" class="popup__close-icon" alt="кнопка закрытия"></button>
       <h2 class="popup__title">Введите статистику команд за последние 8 матчей</h2>
       <a class="popup__link" href="https://www.flashscore.ru.com/" target="_blank">Перейти на Myscore</a>
-      <form name="formMath" class="popup__form-math">
+      <form name="formMath" id='formMath' class="popup__form-math">
         <div class="popup__form-container">
         <div class="popup__team-home">
           <h2 class="popup__title-home">Хозяева</h2>
@@ -48,18 +48,18 @@
           </ul>
           <ul class="popup__list">
             <li><p class="popup__subtitle">Пропущено</p></li>
-            <li><input id="awayScored" name="awayScored" type="text" class="popup__input popup__input_mod_away-scored"></li>
+            <li><input id="homeMissed" name="homeMissed" type="text" class="popup__input popup__input_mod_away-scored"></li>
           </ul>
         </div>
         <div class="popup__team-home">
         <h2 class="popup__title-home">Гости</h2>
           <ul class="popup__list">
              <li><p class="popup__subtitle">Забито голов</p></li>
-             <li><input id="homeScored" name="homeScored" type="text" class="popup__input popup__input_mod_home-scored"></li>
+             <li><input id="awayScored" name="awayScored" type="text" class="popup__input popup__input_mod_home-scored"></li>
           </ul>
           <ul class="popup__list">
              <li><p class="popup__subtitle">Пропущено</p></li>
-             <li><input id="awayScored" name="awayScored" type="text" class="popup__input popup__input_mod_away-scored"></li>
+             <li><input id="awayMissed" name="awayMissed" type="text" class="popup__input popup__input_mod_away-scored"></li>
           </ul>
         </div>
         </div>
@@ -67,18 +67,20 @@
         <div class="popup__player-list">
         <div class="popup__attack-player">
           <label>выбрать количество</label>
-          <select id="selectvalue">
-            <option>1</option>
-            <option>2</option>
-            <option>3</option>
+          <select id="selectvalue" name="selectAttackHome">
+            <option selected value="0">0</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
           </select>
         </div>
         <div class="popup__attack-player">
             <label>выбрать количество</label>
-            <select id="selectvalue">
-              <option>1</option>
-              <option>2</option>
-              <option>3</option>
+            <select id="selectvalue" name="selectAttackAway">
+              <option selected value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
             </select>
           </div>
         </div>
@@ -86,18 +88,20 @@
         <div class="popup__player-list">
             <div class="popup__attack-player">
               <label>выбрать количество</label>
-              <select id="selectvalue">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
+              <select id="selectvalue" name="selectDefHome">
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
               </select>
             </div>
             <div class="popup__attack-player">
                 <label>выбрать количество</label>
-                <select id="selectvalue">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
+                <select id="selectvalue" name="selectDefAway">
+                  <option selected value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
                 </select>
               </div>
             </div>
@@ -105,30 +109,30 @@
         <div class="popup__player-list">
             <div class="popup__attack-player">
               <label>Количество звёзд</label>
-              <select id="selectvalue">
-                <option>1</option>
-                <option>2</option>
-                <option>3</option>
-                <option>4</option>
-                <option>5</option>
+              <select id="selectvalue" name="teamClassHome">
+                <option selected value="1">1</option>
+                <option value="2">2</option>
+                <option value="3">3</option>
+                <option value="4">4</option>
+                <option value="5">5</option>
               </select>
             </div>
             <div class="popup__attack-player">
                 <label>Количество звёзд</label>
-                <select id="selectvalue">
-                  <option>1</option>
-                  <option>2</option>
-                  <option>3</option>
-                  <option>4</option>
-                  <option>5</option>
+                <select id="selectvalue" name="teamClassAway">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
                 </select>
               </div>
             </div>
         <button type="button" class="popup__math-run">Вычислить</button>
         <div class="popup__result">
-         <p class="popup__result-home">1,2</p>
+         <p class="popup__result-home" id="resultHome"></p>
          <h2 class="popup__home-without">Результат</h2>
-         <p class="popup__result-away">0,6</p>
+         <p class="popup__result-away" id="resultAway"></p>
         </div>
       </form>
     </div>
