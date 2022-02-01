@@ -27,9 +27,9 @@ function areaRectangle(){
 
 
 
-  var l=(a/8+o/8)-1.2;
+  var l=(a/5+o/5);
 
-  var r=(b/8+e/8)-1.2;
+  var r=(b/5+e/5);
 
   var u=p-f;
 
