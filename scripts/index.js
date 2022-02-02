@@ -158,15 +158,18 @@ popupMathRun.addEventListener('click', () => {
 function PoissonDistrib(key_var , lambda_var){
   const resultHome = document.querySelector('.popup__result-home');
   const resultAwayTeam = document.querySelector('.popup__result-away');
+  
    
   var u = popupResultHome.textContent ; //сюда вводим среднее значение голов
-  var k = 1; //сюда вводить ожидаемое кол-во голов 
+  var k = document.formMath.scoreHomeTeam.value; //сюда вводить ожидаемое кол-во голов 
   var awaygoal = popupResultAway.textContent;
-  var awayK = 1;
+  var awayK = document.formMath.scoreAwayTeam.value;
+  var first = document.formMath.scoreHomeTeam.value;
+  var second = document.formMath.scoreAwayTeam.value;
   
   var result = Fixed(PoissonTerm( u, k ),8,4);
   var resultAway = (Fixed(PoissonTerm( awaygoal,awayK ),8,4))*100;
-  return 'вероятность счета 1:1 равна ' + (result*resultAway.toFixed(2)).toFixed(2) + ' %'
+  return 'вероятность счета ' + first + ':' + second + ' равна ' + (result*resultAway.toFixed(2)).toFixed(2) + ' %'
   }
 
 
