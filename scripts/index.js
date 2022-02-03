@@ -17,6 +17,10 @@ const twoNotLoss = document.querySelector('.result-container__subtitle_twoX');
 const oneNullHomeTeam = document.querySelector('.result-container__subtitle_oneNull');
 const twoNullAwayTeam = document.querySelector('.result-container__subtitle_twoNull');
 
+const minusOneTeam = document.querySelector('.result-container__subtitle_minusOneFirst');
+const minusOneTeamTwo = document.querySelector('.result-container__subtitle_minusOneSecond');
+
+
 
 function areaRectangle(){
   var a=1*document.formMath.homeScored.value;
@@ -92,9 +96,6 @@ if(u===1)
 }
 
 
-popupMathRun.addEventListener('click', () => {
-  areaRectangle()
-})
 
 
 //   for (let b = 0.1; b<7; b+=0.1) {
@@ -220,6 +221,8 @@ function PoissonDistrib(key_var , lambda_var){
 
   //Победа гостей
 
+  
+
   const nullOne = finalResult[1];  //0-1
   const nullTwo = finalResult[2]; //0-2
   const nullThree = finalResult[3]; //0-3
@@ -280,7 +283,13 @@ function PoissonDistrib(key_var , lambda_var){
  //2(0)
  twoNullAwayTeam.textContent = winAwayTeam.toFixed(2) + ' %';
 
+ //1(-1)
+ const minusOneFirstTeam = twoNull+threeNull+threeOne+fourNull+fourOne+fourTwo+fiveNull+fiveOne+fiveTwo+fiveThree+sixNull+sixOne+sixTwo+sixThree+sixFour+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour+sevenFive;
+ minusOneTeam.textContent = minusOneFirstTeam.toFixed(2) + ' %';
 
+ //2(-1)
+ const minusOneSecondTeam = nullTwo+nullThree+oneThree+nullFour+oneFour+twoFour+nullFive+oneFive+twoFive+threeFive+nullSix+oneSix+twoSix+threeSix+fourSix+nullSeven+oneSeven+twoSeven+threeSeven+fourSeven+fiveSeven;
+ minusOneTeamTwo.textContent = minusOneSecondTeam.toFixed(2) + ' %';
   return  
   }
 
@@ -403,7 +412,10 @@ function PosV( x ) {
   if (x < 0)  x = -x;
   return x;
   }
+ 
 
-  popupRunResult.addEventListener('click', () => {
-    popupWinText.textContent = PoissonDistrib()
-  })
+  popupMathRun.addEventListener('click', () => {
+   areaRectangle()
+   popupWinText.textContent = PoissonDistrib()
+ })
+ 
