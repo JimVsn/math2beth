@@ -13,7 +13,9 @@ const drawPersent = document.querySelector('.result-container__subtitle_draw');
 const lossPersent = document.querySelector('.result-container__subtitle_loss');
 const oneNotLoss = document.querySelector('.result-container__subtitle_oneX');
 const notDraw = document.querySelector('.result-container__subtitle_notdraw');
-const twoNotLoss = document.querySelector('.result-container__subtitle_twoX')
+const twoNotLoss = document.querySelector('.result-container__subtitle_twoX');
+const oneNullHomeTeam = document.querySelector('.result-container__subtitle_oneNull');
+const twoNullAwayTeam = document.querySelector('.result-container__subtitle_twoNull');
 
 
 function areaRectangle(){
@@ -262,16 +264,21 @@ function PoissonDistrib(key_var , lambda_var){
 
  //Процент на 1х
  const oneXHomeTeam = winHomeTeam+drawHomeAway;
- oneNotLoss.textContent = oneXHomeTeam.toFixed(2);
+ oneNotLoss.textContent = oneXHomeTeam.toFixed(2) + ' %';
 
  // 2x
  const twoXAwayTeam = winAwayTeam+drawHomeAway;
- twoNotLoss.textContent = twoXAwayTeam.toFixed(2);
+ twoNotLoss.textContent = twoXAwayTeam.toFixed(2) + ' %';
 
  //12
  const notDrawHomeAway = 100-drawHomeAway;
- notDraw.textContent = notDrawHomeAway.toFixed(2);
+ notDraw.textContent = notDrawHomeAway.toFixed(2) + ' %';
 
+ //1(0)
+ oneNullHomeTeam.textContent = winHomeTeam.toFixed(2) + ' %';
+
+ //2(0)
+ twoNullAwayTeam.textContent = winAwayTeam.toFixed(2) + ' %';
 
 
   return  
