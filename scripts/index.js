@@ -8,6 +8,10 @@ const popupResultAway = document.querySelector('.popup__result-away');
 const popupRunResult = document.querySelector('.popup__math-run_mod');
 const popupWinText = document.querySelector('.popup__win-text');
 
+const winPersent = document.querySelector('.result-container__subtitle_win');
+const drawPersent = document.querySelector('.result-container__subtitle_draw');
+const lossPersent = document.querySelector('.result-container__subtitle_loss')
+
 
 function areaRectangle(){
   var a=1*document.formMath.homeScored.value;
@@ -83,15 +87,6 @@ if(u===1)
 }
 
 
-function openPopup(popup){
-  popup.classList.add('popup_opened');
-}
-
-function closePopup(popup) {
-  popup.classList.remove('popup_opened')
-}
-
-
 popupMathRun.addEventListener('click', () => {
   areaRectangle()
 })
@@ -157,16 +152,111 @@ function PoissonDistrib(key_var , lambda_var){
   const resultAwayTeam = document.querySelector('.popup__result-away');
   
    
-  var u = popupResultHome.textContent ; //сюда вводим среднее значение голов
-  var k = document.formMath.scoreHomeTeam.value; //сюда вводить ожидаемое кол-во голов 
-  var awaygoal = popupResultAway.textContent;
-  var awayK = document.formMath.scoreAwayTeam.value;
-  var first = document.formMath.scoreHomeTeam.value;
-  var second = document.formMath.scoreAwayTeam.value;
+  var u = popupResultHome.textContent ; //Полученное среднее значение голов домашней команды из предыдущей формулы
+  var awaygoal = popupResultAway.textContent; //Полученное среднее значение голов команды гостей из предыдущей формулы
+  const k = [0, 1, 2, 3, 4, 5, 6, 7];  //массив 0т 0 до 7 для хозяев
+  var awayK = [0, 1, 2, 3, 4, 5, 6, 7];  //массив для гостей
+
+  var result = k.map(i=>(Fixed(PoissonTerm( u, [i] ),8,4)*100).toFixed(2),) 
+  var resultAway =awayK.map(i=>Fixed(PoissonTerm( awaygoal,[i] ),8,4),);
+//цикл для получения процентов для каждого счета
+  var finalResult = []
+  for (var i=0; i<result.length; i++) {
+   for (var j=0; j<resultAway.length; j++) {
+      finalResult.push(result[i]*resultAway[j]);
+     }
+    }
+
+    //Победа хозяев
+
+  const oneNull = finalResult[8]; //1-0  const winHomeTeam = oneNull+twoNull+twoOne+threeNull+threeOne+threeTwo+fourNull+fourOne+fourTwo
+  const twoNull = finalResult[16]; //2-0
+  const twoOne = finalResult[17]; //2-1
+  const threeNull = finalResult[24]; //3-0
+  const threeOne = finalResult[25]; //3-1
+  const threeTwo = finalResult[26]; //3-2
+  const fourNull = finalResult[32]; //4-0
+  const fourOne = finalResult[33]; //4-1
+  const fourTwo = finalResult[34];//4-2
+  const fourThree = finalResult[35]; //4-3
+  const fiveNull = finalResult[40]; //5-0
+  const fiveOne = finalResult[41]; //5-1
+  const fiveTwo = finalResult[42];//5-2
+  const fiveThree = finalResult[43]; //5-3
+  const fiveFour = finalResult[44]; //5-4
+  const sixNull = finalResult[48]; //6-0
+  const sixOne = finalResult[49]; //6-1
+  const sixTwo = finalResult[50];//6-2
+  const sixThree = finalResult[51]; //6-3
+  const sixFour = finalResult[52]; //6-4
+  const sixFive = finalResult[53]; //6-5
+  const sevenNull = finalResult[56]; //7-0
+  const sevenOne = finalResult[57]; //7-1
+  const sevenTwo = finalResult[58];//7-2
+  const sevenThree = finalResult[59]; //7-3
+  const sevenFour = finalResult[60]; //7-4
+  const sevenFive = finalResult[61]; //7-5
+  const sevenSix = finalResult[62]; //7-6
+
+  //Ничьи
+
+
+  const nullNull = finalResult[0]; //0-0
+  const oneOne = finalResult[9]; //1-1
+  const twoTwo = finalResult[18]; //2-2
+  const threeThree = finalResult[27]; //3-3
+  const fourFour = finalResult[36]; //4-4
+  const fiveFive = finalResult[45]; //5-5
+  const sixSix = finalResult[54]; //6-6
+  const sevenSeven = finalResult[63]; //7-7
+
+  //Победа гостей
+
+  const nullOne = finalResult[1];  //0-1
+  const nullTwo = finalResult[2]; //0-2
+  const nullThree = finalResult[3]; //0-3
+  const nullFour = finalResult[4]; //0-4
+  const nullFive = finalResult[5];//0-5
+  const nullSix = finalResult[6]; //0-6
+  const nullSeven = finalResult[7]; //0-7 
+  const oneTwo = finalResult[10]; //1-2
+  const oneThree = finalResult[11]; //1-3
+  const oneFour = finalResult[12]; //1-4
+  const oneFive = finalResult[13]; //1-5
+  const oneSix = finalResult[14]; //1-6
+  const oneSeven = finalResult[15]; //1-7
+  const twoThree = finalResult[19]; //2-3
+  const twoFour = finalResult[20]; //2-4
+  const twoFive = finalResult[21]; //2-5
+  const twoSix = finalResult[22]; //2-6
+  const twoSeven = finalResult[23]; //2-7
+  const threeFour = finalResult[28]; //3-4
+  const threeFive = finalResult[29]; //3-5
+  const threeSix = finalResult[30]; //3-6
+  const threeSeven = finalResult[31]; //3-7
+  const fourFive = finalResult[37]; //4-5
+  const fourSix = finalResult[38]; //4-6
+  const fourSeven = finalResult[39]; //4-7
+  const fiveSix = finalResult[46]; //5-6
+  const fiveSeven = finalResult[47]; //5-7
+  const sixSeven = finalResult[55]; //6-7
+
   
-  var result = Fixed(PoissonTerm( u, k ),8,4);
-  var resultAway = (Fixed(PoissonTerm( awaygoal,awayK ),8,4))*100;
-  return 'вероятность счета ' + first + ':' + second + ' равна ' + (result*resultAway.toFixed(2)).toFixed(2) + ' %'
+ //Процент победы домашней команды
+ const winHomeTeam = oneNull+twoNull+twoOne+threeNull+threeOne+threeTwo+fourNull+fourOne+fourTwo+fourThree+fiveOne+fiveNull+fiveTwo+fiveThree+fiveFour+sixNull+sixOne+sixTwo+sixThree+sixFour+sixFive+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour+sevenFive+sevenSix;
+ winPersent.textContent = winHomeTeam.toFixed(2) + ' %';
+
+ //Процент победы выездной команды
+ const winAwayTeam = nullOne+nullTwo+nullThree+nullFour+nullFive+nullSix+nullSeven+oneTwo+oneThree+oneFour+oneFive+oneSix+oneSeven+twoThree+twoFour+twoFive+twoSix+twoSeven+threeFour+threeFive+threeSix+threeSeven+fourFive+fourSix+fourSeven+fiveSix+fiveSeven+sixSeven;
+ lossPersent.textContent = winAwayTeam.toFixed(2) + ' %';
+  console.log(winHomeTeam.toFixed(2))
+
+ //Процент на ничью
+ const drawHomeAway = 100-winHomeTeam.toFixed(2)-winAwayTeam.toFixed(2);
+ drawPersent.textContent = drawHomeAway.toFixed(2) + ' %';
+
+
+  return  
   }
 
 
