@@ -1,0 +1,4 @@
+.result-container__persent {
+  display: flex;
+  justify-content: space-between;
+}
