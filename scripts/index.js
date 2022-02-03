@@ -1,10 +1,8 @@
 const popupMath = document.querySelector('.popup_type_math');
-const openButtonMath = document.querySelector('.container__math-button_mod');
-const popupMathCloseButton = popupMath.querySelector('.popup__close');
 
 //Формула расчета среднего значения
 
-const popupMathRun = popupMath.querySelector('.popup__math-run');
+const popupMathRun = document.querySelector('.popup__math-run');
 const popupResultHome = document.querySelector('.popup__result-home');
 const popupResultAway = document.querySelector('.popup__result-away');
 const popupRunResult = document.querySelector('.popup__math-run_mod');
@@ -77,8 +75,8 @@ if(u===1)
   if (w===-3) y=y+(1*1.5);
   if (w===-4) y=y+(1*2);
   
-  if (m<0.11) m=0.01;
-  if (y<0.11) y=0.01;
+  if (m<0.1) m=0.1;
+  if (y<0.1) y=0.1;
 
   popupResultHome.textContent = m.toFixed(1);
   popupResultAway.textContent = y.toFixed(1);
@@ -93,8 +91,7 @@ function closePopup(popup) {
   popup.classList.remove('popup_opened')
 }
 
-openButtonMath.addEventListener('click', () => openPopup(popupMath));
-popupMathCloseButton.addEventListener('click', () => closePopup(popupMath));
+
 popupMathRun.addEventListener('click', () => {
   areaRectangle()
 })

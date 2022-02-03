@@ -3,8 +3,10 @@
   max-width: 358px;
   display: flex;
   flex-direction: column;
-  margin-left: 36px;
+  margin-left: 18px;
+  margin-right: 18px;
   margin-bottom: 50px;
+  border: 1px red solid;
 }
 
 @media screen and (max-width: 670px) {
