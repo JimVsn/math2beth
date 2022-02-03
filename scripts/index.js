@@ -10,7 +10,10 @@ const popupWinText = document.querySelector('.popup__win-text');
 
 const winPersent = document.querySelector('.result-container__subtitle_win');
 const drawPersent = document.querySelector('.result-container__subtitle_draw');
-const lossPersent = document.querySelector('.result-container__subtitle_loss')
+const lossPersent = document.querySelector('.result-container__subtitle_loss');
+const oneNotLoss = document.querySelector('.result-container__subtitle_oneX');
+const notDraw = document.querySelector('.result-container__subtitle_notdraw');
+const twoNotLoss = document.querySelector('.result-container__subtitle_twoX')
 
 
 function areaRectangle(){
@@ -159,6 +162,8 @@ function PoissonDistrib(key_var , lambda_var){
 
   var result = k.map(i=>(Fixed(PoissonTerm( u, [i] ),8,4)*100).toFixed(2),) 
   var resultAway =awayK.map(i=>Fixed(PoissonTerm( awaygoal,[i] ),8,4),);
+
+
 //цикл для получения процентов для каждого счета
   var finalResult = []
   for (var i=0; i<result.length; i++) {
@@ -167,9 +172,10 @@ function PoissonDistrib(key_var , lambda_var){
      }
     }
 
+
     //Победа хозяев
 
-  const oneNull = finalResult[8]; //1-0  const winHomeTeam = oneNull+twoNull+twoOne+threeNull+threeOne+threeTwo+fourNull+fourOne+fourTwo
+  const oneNull = finalResult[8]; //1-0  
   const twoNull = finalResult[16]; //2-0
   const twoOne = finalResult[17]; //2-1
   const threeNull = finalResult[24]; //3-0
@@ -249,11 +255,23 @@ function PoissonDistrib(key_var , lambda_var){
  //Процент победы выездной команды
  const winAwayTeam = nullOne+nullTwo+nullThree+nullFour+nullFive+nullSix+nullSeven+oneTwo+oneThree+oneFour+oneFive+oneSix+oneSeven+twoThree+twoFour+twoFive+twoSix+twoSeven+threeFour+threeFive+threeSix+threeSeven+fourFive+fourSix+fourSeven+fiveSix+fiveSeven+sixSeven;
  lossPersent.textContent = winAwayTeam.toFixed(2) + ' %';
-  console.log(winHomeTeam.toFixed(2))
 
  //Процент на ничью
  const drawHomeAway = 100-winHomeTeam.toFixed(2)-winAwayTeam.toFixed(2);
  drawPersent.textContent = drawHomeAway.toFixed(2) + ' %';
+
+ //Процент на 1х
+ const oneXHomeTeam = winHomeTeam+drawHomeAway;
+ oneNotLoss.textContent = oneXHomeTeam.toFixed(2);
+
+ // 2x
+ const twoXAwayTeam = winAwayTeam+drawHomeAway;
+ twoNotLoss.textContent = twoXAwayTeam.toFixed(2);
+
+ //12
+ const notDrawHomeAway = 100-drawHomeAway;
+ notDraw.textContent = notDrawHomeAway.toFixed(2);
+
 
 
   return  
