@@ -36,6 +36,8 @@
 @import url(../blocks/popup/__win/popup__win.css);
 @import url(../blocks/popup/__win-text/popup__win-text.css);
 @import url(../blocks/popup/__box-score/popup__box-score.css);
+@import url(../blocks/popup/__form-container-box/popup__form-container-box.css);
+@import url(../blocks/popup/__player-list-box/popup__player-list-box.css);
 @import url(../blocks/result-container/result-container.css);
 @import url(../blocks/result-container/__win-box/result-container__win-box.css);
 @import url(../blocks/result-container/__title/result-container__title.css);

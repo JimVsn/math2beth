@@ -1,0 +1,7 @@
+.popup__player-list-box {
+    border: 1px red solid;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+  max-width: 442px;
+}

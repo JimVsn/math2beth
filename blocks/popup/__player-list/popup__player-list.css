@@ -1,6 +1,8 @@
 .popup__player-list {
   display: flex;
-  margin-bottom: 15px;
+  margin-bottom: 0px;
+  width: 440px;
+  flex-direction: column;
 }
 
 @media screen and (max-width: 670px) {

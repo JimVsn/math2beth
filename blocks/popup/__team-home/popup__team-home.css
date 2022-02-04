@@ -1,7 +1,6 @@
 .popup__team-home {
   display: flex;
   flex-direction: column;
-  max-width: 180px;
   width: 100%;
   margin-right: 5px;
 }
