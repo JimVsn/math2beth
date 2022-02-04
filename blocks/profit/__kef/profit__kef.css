@@ -1,0 +1,8 @@
+.profit__kef {
+  color: blue;
+  margin-right: 100px;
+}
+
+.profit__kef:last-child {
+    margin-right: 10px;
+}

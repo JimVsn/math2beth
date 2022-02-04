@@ -44,3 +44,6 @@
 @import url(../blocks/result-container/__persent/result-container__persent.css);
 @import url(../blocks/result-container/__subtitle/result-container__subtitle.css);
 @import url(../blocks/result-container/__subtitle/_mod/result-container__subtitle_mod.css);
+@import url(../blocks/profit/profit.css);
+@import url(../blocks/profit/__title/profit__title.css);
+@import url(../blocks/profit/__kef/profit__kef.css);

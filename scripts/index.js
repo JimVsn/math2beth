@@ -20,6 +20,30 @@ const twoNullAwayTeam = document.querySelector('.result-container__subtitle_twoN
 const minusOneTeam = document.querySelector('.result-container__subtitle_minusOneFirst');
 const minusOneTeamTwo = document.querySelector('.result-container__subtitle_minusOneSecond');
 
+const profitTitle = document.querySelector('.profit__title');
+const profitKef = document.querySelector('.profit__kef');
+const profitTitleA = document.querySelector('.profit__title_mod_a');
+const profitKefA = document.querySelector('.profit__kef_mod_a');
+const profitTitleB = document.querySelector('.profit__title_mod_b');
+const profitKefB = document.querySelector('.profit__kef_mod_b');
+const profitTitleC = document.querySelector('.profit__title_mod_c');
+const profitKefC = document.querySelector('.profit__kef_mod_c');
+
+const profitTitleD = document.querySelector('.profit__title_mod_d');
+const profitKefD = document.querySelector('.profit__kef_mod_d');
+const profitTitleE = document.querySelector('.profit__title_mod_e');
+const profitKefE = document.querySelector('.profit__kef_mod_e');
+
+const profitTitleF = document.querySelector('.profit__title_mod_f');
+const profitKefF = document.querySelector('.profit__kef_mod_f');
+const profitTitleG = document.querySelector('.profit__title_mod_g');
+const profitKefG = document.querySelector('.profit__kef_mod_g');
+
+const profitTitleH = document.querySelector('.profit__title_mod_h');
+const profitKefH = document.querySelector('.profit__kef_mod_h');
+const profitTitleI = document.querySelector('.profit__title_mod_i');
+const profitKefI = document.querySelector('.profit__kef_mod_i');
+
 
 
 function areaRectangle(){
@@ -257,39 +281,125 @@ function PoissonDistrib(key_var , lambda_var){
  const winHomeTeam = oneNull+twoNull+twoOne+threeNull+threeOne+threeTwo+fourNull+fourOne+fourTwo+fourThree+fiveOne+fiveNull+fiveTwo+fiveThree+fiveFour+sixNull+sixOne+sixTwo+sixThree+sixFour+sixFive+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour+sevenFive+sevenSix;
  winPersent.textContent = winHomeTeam.toFixed(2) + ' %';
 
+ const profitWinFirstTeam = 1.15/(winHomeTeam/100);
+ profitTitle.textContent = 'Выгода от коэф ';
+ profitKef.textContent = profitWinFirstTeam.toFixed(2);
+ console.log('Выгода от коэф ' + profitWinFirstTeam.toFixed(2) + ' и выше')
+
  //Процент победы выездной команды
  const winAwayTeam = nullOne+nullTwo+nullThree+nullFour+nullFive+nullSix+nullSeven+oneTwo+oneThree+oneFour+oneFive+oneSix+oneSeven+twoThree+twoFour+twoFive+twoSix+twoSeven+threeFour+threeFive+threeSix+threeSeven+fourFive+fourSix+fourSeven+fiveSix+fiveSeven+sixSeven;
  lossPersent.textContent = winAwayTeam.toFixed(2) + ' %';
+
+ const profitWinSecondTeam = 1.15/(winAwayTeam/100);
+ profitTitleB.textContent = 'Выгода от коэф ';
+ profitKefB.textContent = profitWinSecondTeam.toFixed(2);
+ console.log('Выгода от коэф ' + profitWinSecondTeam.toFixed(2) + ' и выше')
 
  //Процент на ничью
  const drawHomeAway = 100-winHomeTeam.toFixed(2)-winAwayTeam.toFixed(2);
  drawPersent.textContent = drawHomeAway.toFixed(2) + ' %';
 
+ const profitDraw = 1.15/(drawHomeAway/100);
+ profitTitleA.textContent = 'Выгода от коэф ';
+ profitKefA.textContent = profitDraw.toFixed(2);
+ console.log('Выгода от коэф ' + profitDraw.toFixed(2) + ' и выше')
+
  //Процент на 1х
  const oneXHomeTeam = winHomeTeam+drawHomeAway;
  oneNotLoss.textContent = oneXHomeTeam.toFixed(2) + ' %';
+
+ const profitXfirstTeam = 1.15/(oneXHomeTeam/100);
+ profitTitleC.textContent = 'Выгода от коэф ';
+ profitKefC.textContent = profitXfirstTeam.toFixed(2);
 
  // 2x
  const twoXAwayTeam = winAwayTeam+drawHomeAway;
  twoNotLoss.textContent = twoXAwayTeam.toFixed(2) + ' %';
 
+ const profitXSecondTeam = 1.15/(twoXAwayTeam/100);
+ profitTitleE.textContent = 'Выгода от коэф ';
+ profitKefE.textContent = profitXSecondTeam.toFixed(2); 
+
  //12
  const notDrawHomeAway = 100-drawHomeAway;
  notDraw.textContent = notDrawHomeAway.toFixed(2) + ' %';
 
+ const profitNotDraw = 1.15/(notDrawHomeAway/100);
+ profitTitleD.textContent = 'Выгода от коэф ';
+ profitKefD.textContent = profitNotDraw.toFixed(2);
+
  //1(0)
  oneNullHomeTeam.textContent = winHomeTeam.toFixed(2) + ' %';
 
+ const profitNullFirstTeam = 1.15/(winHomeTeam/100);
+ profitTitleF.textContent = 'Выгода от коэф ';
+ profitKefF.textContent = profitNullFirstTeam.toFixed(2);
+
  //2(0)
  twoNullAwayTeam.textContent = winAwayTeam.toFixed(2) + ' %';
+
+ const profitNullSecondTeam = 1.15/(winAwayTeam/100);
+ profitTitleG.textContent = 'Выгода от коэф ';
+ profitKefG.textContent = profitNullSecondTeam.toFixed(2);
 
  //1(-1)
  const minusOneFirstTeam = twoNull+threeNull+threeOne+fourNull+fourOne+fourTwo+fiveNull+fiveOne+fiveTwo+fiveThree+sixNull+sixOne+sixTwo+sixThree+sixFour+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour+sevenFive;
  minusOneTeam.textContent = minusOneFirstTeam.toFixed(2) + ' %';
 
+ const profitMinusOneFirstTeam = 1.15/(minusOneFirstTeam/100);
+ profitTitleH.textContent = 'Выгода от коэф ';
+ profitKefH.textContent = profitMinusOneFirstTeam.toFixed(2);
+
  //2(-1)
  const minusOneSecondTeam = nullTwo+nullThree+oneThree+nullFour+oneFour+twoFour+nullFive+oneFive+twoFive+threeFive+nullSix+oneSix+twoSix+threeSix+fourSix+nullSeven+oneSeven+twoSeven+threeSeven+fourSeven+fiveSeven;
  minusOneTeamTwo.textContent = minusOneSecondTeam.toFixed(2) + ' %';
+
+ const profitMinusOneSecondTeam = 1.15/(minusOneSecondTeam/100);
+ profitTitleI.textContent = 'Выгода от коэф ';
+ profitKefI.textContent = profitMinusOneSecondTeam.toFixed(2);
+
+ //1(-1,5)
+ const minusOneFiveFirstTeam = document.querySelector('.result-container__subtitle_minusOneFiveFirst');
+ minusOneFiveFirstTeam.textContent = minusOneFirstTeam.toFixed(2) + ' %';
+ const profitTitleJ = document.querySelector('.profit__title_mod_j');
+ const profitKefJ = document.querySelector('.profit__kef_mod_j');
+
+ const profitMinusOneFiveFirstTeam = 1.15/(minusOneFirstTeam/100);
+ profitTitleJ.textContent = 'Выгода от коэф ';
+ profitKefJ.textContent = profitMinusOneFiveFirstTeam.toFixed(2);
+
+
+
+ //2(-1,5)
+ const minusOneFiveSecondTeam = document.querySelector('.result-container__subtitle_minusOneFiveSecond');
+ minusOneFiveSecondTeam.textContent = minusOneSecondTeam.toFixed(2) + ' %';
+ const profitTitleK = document.querySelector('.profit__title_mod_k');
+ const profitKefK = document.querySelector('.profit__kef_mod_k');
+
+ const profitMinusOneFiveSecondTeam = 1.15/(minusOneSecondTeam/100);
+ profitTitleK.textContent = 'Выгода от коэф ';
+ profitKefK.textContent = profitMinusOneFiveSecondTeam.toFixed(2);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
   return  
   }
 
@@ -416,6 +526,6 @@ function PosV( x ) {
 
   popupMathRun.addEventListener('click', () => {
    areaRectangle()
-   popupWinText.textContent = PoissonDistrib()
+   PoissonDistrib()
  })
  
