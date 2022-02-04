@@ -380,6 +380,60 @@ function PoissonDistrib(key_var , lambda_var){
  profitTitleK.textContent = 'Выгода от коэф ';
  profitKefK.textContent = profitMinusOneFiveSecondTeam.toFixed(2);
 
+ //1(-2)
+ const minusTwoFirstTeam = threeNull+fourNull+fourOne+fiveNull+fiveOne+fiveTwo+sixNull+sixOne+sixTwo+sixThree+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour;
+ const minusTwoFirst = document.querySelector('.result-container__subtitle_minusTwoFirst');
+ minusTwoFirst.textContent = minusTwoFirstTeam.toFixed(2) + ' %';
+ const profitTitleL = document.querySelector('.profit__title_mod_l');
+ const profitKefL = document.querySelector('.profit__kef_mod_l');
+ 
+ const profitMinusTwoFirstTeam = 1.15/(minusTwoFirstTeam/100);
+ profitTitleL.textContent = 'Выгода от коэф ';
+ profitKefL.textContent = profitMinusTwoFirstTeam.toFixed(2);
+
+ //2(-2)
+ const minusTwoSecondTeam = nullThree+nullFour+oneFour+nullFive+oneFive+twoFive+nullSix+oneSix+twoSix+threeSix+nullSeven+oneSeven+twoSeven+threeSeven+fourSeven;
+ const minusTwoSecond = document.querySelector('.result-container__subtitle_minusTwoSecond');
+ minusTwoSecond.textContent = minusTwoSecondTeam.toFixed(2) + ' %';
+ const profitTitleM = document.querySelector('.profit__title_mod_m');
+ const profitKefM = document.querySelector('.profit__kef_mod_m');
+ 
+ const profitMinusTwoSecondTeam = 1.15/(minusTwoSecondTeam/100);
+ profitTitleM.textContent = 'Выгода от коэф ';
+ profitKefM.textContent = profitMinusTwoSecondTeam.toFixed(2);
+
+ //1(-1.5)
+ const minusTwoFiveFirstTeam = threeNull+fourNull+fourOne+fiveNull+fiveOne+fiveTwo+sixNull+sixOne+sixTwo+sixThree+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour;
+ const minusTwoFiveFirst = document.querySelector('.result-container__subtitle_minusTwoFiveFirst');
+ minusTwoFiveFirst.textContent = minusTwoFiveFirstTeam.toFixed(2) + ' %';
+ const profitTitleN = document.querySelector('.profit__title_mod_n');
+ const profitKefN = document.querySelector('.profit__kef_mod_n');
+ 
+ const profitMinusTwoFiveFirstTeam = 1.15/(minusTwoFiveFirstTeam/100);
+ profitTitleN.textContent = 'Выгода от коэф ';
+ profitKefN.textContent = profitMinusTwoFiveFirstTeam.toFixed(2);
+
+ //2(-2.5)
+ const minusTwoFiveSecondTeam = nullThree+nullFour+oneFour+nullFive+oneFive+twoFive+nullSix+oneSix+twoSix+threeSix+nullSeven+oneSeven+twoSeven+threeSeven+fourSeven;
+ const minusTwoFiveSecond = document.querySelector('.result-container__subtitle_minusTwoFiveSecond');
+ minusTwoFiveSecond.textContent = minusTwoFiveSecondTeam.toFixed(2) + ' %';
+ const profitTitleO = document.querySelector('.profit__title_mod_o');
+ const profitKefO = document.querySelector('.profit__kef_mod_o');
+ 
+ const profitMinusTwoFiveSecondTeam = 1.15/(minusTwoFiveSecondTeam/100);
+ profitTitleO.textContent = 'Выгода от коэф ';
+ profitKefO.textContent = profitMinusTwoFiveSecondTeam.toFixed(2);
+
+ //1(+1)
+ const plusOneFirstTeam = nullNull+oneNull+oneOne+twoNull+twoOne+twoTwo+threeNull+threeOne+threeTwo+threeThree+fourNull+fourOne+fourThree+fourFour+fiveNull+fiveOne+fiveTwo+fiveThree+fiveFour+fiveFive+sixNull+sixOne+sixTwo+sixThree+sixFour+sixFive+sixSix+sevenNull+sevenOne+sevenTwo+sevenThree+sevenFour+sevenFive+sevenSix+sevenSeven;
+ const plusOneFirst = document.querySelector('.result-container__subtitle_plusOneFirst');
+ plusOneFirst.textContent = plusOneFirstTeam.toFixed(2) + ' %';
+ const profitTitleP = document.querySelector('.profit__title_mod_p');
+ const profitKefP = document.querySelector('.profit__kef_mod_p');
+ 
+ const profitPlusOneFirstdTeam = 1.15/(plusOneFirstTeam/100);
+ profitTitleP.textContent = 'Выгода от коэф ';
+ profitKefP.textContent = profitPlusOneFirstdTeam.toFixed(2);
 
 
 
